@@ -5,7 +5,7 @@ try:
 	yt = YouTube(link)
 except: 
 	print("Connection Error")
-stream = yt.streams.filter(file_extension='mp4').last()
+stream = yt.streams.filter(file_extension='mp4').all()[2]
 try: 
 	stream.download()
 except: 
